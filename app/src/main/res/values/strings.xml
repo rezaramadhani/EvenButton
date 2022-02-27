@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Act1part2</string>
+    <string name="tEmail">Email</string>
+    <string name="tPassword">Password</string>
+    <string name="bsignin">Sign-in</string>
+</resources>
