@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,19 +20,27 @@ public class MainActivity extends AppCompatActivity {
 
     //Deklarasi variabel untuk EditText
     EditText edemail, edpassword;
+    TextView regis;
 
     //Deklarasi variabel untuk menyimpan email dan password
     String nama, password;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        regis = findViewById(R.id.regis);
 
-
-        getMenuInflater().inflate(R.menu.menu, menu);
+        regis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent za = new Intent(getApplicationContext(), MainActivity2.class);
+                startActivity(za);
+            }
+        });
+        //getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.mnDaftar)
         {
@@ -39,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     b.putString("b", password.trim());
 
 
-                    Intent i = new Intent(getApplicationContext(), home.class);
+                    Intent i = new Intent(getApplicationContext(), Welcome.class);
 
                     i.putExtras(b);
 
@@ -92,7 +101,20 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Email Salah", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Email dan Password Salah", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(getApplicationContext(), "EMAIL DAN PASSWORD SALAH!", Toast.LENGTH_SHORT).show();
+
+                    erroremail(edemail, "email salah!");
+                    errorpass(edpassword, "password salah!");
                 }
+            }
+
+            private void erroremail(EditText edemail, String error) {
+                edemail.setError(error);
+            }
+
+            private void errorpass(EditText edpassword, String error) {
+                edpassword.setError(error);
             }
         });
     }

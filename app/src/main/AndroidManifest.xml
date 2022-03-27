@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Act1part2">
         <activity
+            android:name=".Welcome"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
-            android:parentActivityName=".MainActivity"
-            android:exported="false"/>
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".home"
             android:exported="false" />
@@ -21,6 +24,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

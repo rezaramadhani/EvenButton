@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Act1part2</string>
+    <string name="app_name">Todo app</string>
     <string name="tEmail">Email</string>
     <string name="tPassword">Password</string>
     <string name="bsignin">Sign-in</string>
@@ -10,4 +10,8 @@
     <string name="epass">Masukkan Password</string>
     <string name="erepass">Masukkan Password Kembali</string>
     <string name="ealamat">Masukkan Alamat</string>
+    <string name="tnama">Nama</string>
+    <string name="tTask">Masukkan Task</string>
+    <string name="tJt">Masukkan Jenis Task</string>
+    <string name="tLT">Masukkan Lama Task</string>
 </resources>
