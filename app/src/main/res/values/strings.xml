@@ -14,4 +14,11 @@
     <string name="tTask">Masukkan Task</string>
     <string name="tJt">Masukkan Jenis Task</string>
     <string name="tLT">Masukkan Lama Task</string>
+    <string name="lihatdata">Lihat Data</string>
+    <string name="editdata">Edit Data</string>
+    <string name="datakontak">Data Kontak</string>
+    <string name="namaitem">Nama Item</string>
+    <string name="detailkontak">Detail Kontak</string>
+    <string name="nama">Nama</string>
+    <string name="notel">Nomor Telepon</string>
 </resources>

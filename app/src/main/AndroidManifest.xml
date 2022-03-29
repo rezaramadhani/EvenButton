@@ -9,6 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Act1part2">
+
+        <activity
+            android:name=".item_listview"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLihatData"
+            android:parentActivityName=".Home_Activity"
+             />
+        <activity
+            android:name=".Home_Activity"
+            android:parentActivityName=".MainActivity"
+             />
         <activity
             android:name=".Welcome"
             android:exported="false" />
